@@ -354,6 +354,18 @@
   .portrait{margin:22px 0 0;max-width:260px;border-radius:8px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 30px rgba(22,29,46,.16);background:#e9ebf0}
   .portrait img{display:block;width:100%;height:auto}
   @media(max-width:900px){.portrait{max-width:240px;margin-top:16px}}
+
+  /* Contracting job photos */
+  .job-photos{display:grid;grid-template-columns:4fr 3fr;gap:12px;margin:18px 0 4px;max-width:620px}
+  .job-photos img{display:block;width:100%;height:100%;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+  .job-photos > img{aspect-ratio:3/4}
+  .ba{position:relative;aspect-ratio:1/1}
+  .ba-label{position:absolute;top:10px;font-size:.78rem;font-weight:600;color:#fff;background:rgba(12,20,48,.72);border-radius:4px;padding:3px 9px}
+  .job-photos figcaption{grid-column:1/-1;font-size:.86rem;color:var(--ink-faint)}
+  @media(max-width:640px){
+    .job-photos{grid-template-columns:1fr}
+    .job-photos > img{aspect-ratio:4/3;object-position:50% 60%}
+  }
 </style>
 </head>
 <body>
@@ -557,6 +569,15 @@
             <li>Largest single contract: $15,000. 40+ projects a summer from 2023 to 2026</li>
             <li>Tracked revenue per hour by service line, then shifted marketing and crew time to land clearing, the highest earner</li>
           </ul>
+          <figure class="job-photos">
+            <div class="ba">
+              <img src="images/driveway-before-after.webp" alt="A paver driveway before pressure washing, stained and patchy, and after, evenly clean" width="1000" height="1000" loading="lazy" decoding="async">
+              <span class="ba-label" style="left:2%">Before</span>
+              <span class="ba-label" style="left:51.5%">After</span>
+            </div>
+            <img src="images/pressure-washing-midjob.webp" alt="A concrete walkway mid-job, with a sharp line between the cleaned and uncleaned sections and a pressure washer in the background" width="720" height="960" loading="lazy" decoding="async">
+            <figcaption>A paver driveway before and after pressure washing, and a walkway mid-job.</figcaption>
+          </figure>
         </div>
       </div>
 
