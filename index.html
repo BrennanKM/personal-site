@@ -370,6 +370,11 @@
     .job-photos{grid-template-columns:1fr}
     .job-photos > img{aspect-ratio:4/3;object-position:50% 60%}
   }
+
+  /* Pitch photo in Awards */
+  .award-photo{margin:0 0 30px}
+  .award-photo img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+  .award-photo figcaption{margin-top:8px;font-size:.86rem;color:var(--ink-faint)}
 </style>
 </head>
 <body>
@@ -644,12 +649,18 @@
       <h2>Awards</h2>
       <p class="sub">Pitch competitions and school.</p>
     </div>
+    <div>
+    <figure class="award-photo">
+      <img src="images/fowler-pitch.webp" alt="Brennan holding a microphone and pitching JuniorJobHunt to judges, with the Fowler Business Concept Challenge slide on the screen behind him" width="1400" height="851" loading="lazy" decoding="async">
+      <figcaption>Pitching JuniorJobHunt at USD's Fowler Business Concept Challenge.</figcaption>
+    </figure>
     <div class="awards">
       <div class="award"><span class="yr">NOV 2023</span><b>1st Place, Fowler Business Concept Challenge</b><span>University of San Diego · 200+ applicants · $15,000 grant</span></div>
       <div class="award"><span class="yr">MAY 2024</span><b>Finalist, Global Social Innovation Challenge</b><span>USD representative · $1,000 grant</span></div>
       <div class="award"><span class="yr">OCT 2024</span><b>Top 5 Finalist, Intercollegiate Pitch Competition</b><span>San Diego Startup Week</span></div>
       <div class="award"><span class="yr">NOV 2025</span><b>Top 5, Global Student Entrepreneur Awards</b><span>GSEA San Diego competition</span></div>
       <div class="award"><span class="yr">2023–24</span><b>Dean's List, Second Honors</b><span>University of San Diego</span></div>
+    </div>
     </div>
   </div>
 </section>
