@@ -449,6 +449,12 @@
   /* Contact: keep the text clear of bright stars */
   .contact .wrap{position:relative}
   .contact .wrap::before{content:"";position:absolute;inset:-30px 8%;background:radial-gradient(closest-side,rgba(0,0,0,.75),rgba(0,0,0,0));z-index:-1;pointer-events:none}
+
+  /* Closing quote above the footer */
+  .closing-quote{max-width:640px;margin:0 auto;padding:8px 20px 56px;text-align:center}
+  .closing-quote blockquote{font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.5;font-weight:400;color:var(--star-soft)}
+  .closing-quote figcaption{margin-top:12px;font-size:.86rem;line-height:1.5;color:var(--star-faint)}
+  .closing-quote em{font-style:italic}
 </style>
 </head>
 <body>
@@ -826,6 +832,10 @@
       </div>
     </div>
   </section>
+  <figure class="closing-quote">
+    <blockquote>“…nothing alleviates this feeling except flight (the rapid motion of wings).”</blockquote>
+    <figcaption>Lorine Niedecker, as quoted by Nuar Alsadir in <em>Corpsing: On Sex, Death, and Inappropriate Laughter</em></figcaption>
+  </figure>
   <footer>© 2026 Brennan Martin · San Diego, CA and Portland, OR</footer>
 </div>
 
