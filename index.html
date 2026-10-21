@@ -212,12 +212,12 @@
   }
 
   /* Project list */
-  .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
+  .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;align-items:start}
   .project{display:flex;flex-direction:column;padding:26px 0 30px;border-top:1px solid var(--line)}
   .project .when{font-size:.86rem;font-weight:500;color:var(--ink-faint)}
   .project h3{font-size:1.4rem;margin:4px 0 10px}
   .project p{font-size:.98rem;color:var(--ink-soft);margin-bottom:16px}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
   .tags span{font-size:.8rem;font-weight:500;color:var(--navy);background:var(--navy-tint);border-radius:4px;padding:3px 9px}
   @media(max-width:760px){.projects{grid-template-columns:1fr}}
 
@@ -344,6 +344,8 @@
   .shot img{display:block;width:100%;height:auto}
   .project .media{margin:0 0 16px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#e9ebf0;aspect-ratio:16/10}
   .project .media img{display:block;width:100%;height:100%;object-fit:cover}
+  .project .media-natural{aspect-ratio:auto}
+  .project .media-natural img{height:auto}
 
   /* Night sky extras */
   .shooting-star{position:absolute;top:0;left:0;width:150px;height:2px;border-radius:2px;pointer-events:none;opacity:0;z-index:0;
@@ -494,6 +496,9 @@
           <div class="tags"><span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>Product spec</span></div>
         </article>
         <article class="project">
+          <figure class="media media-natural">
+            <img src="images/field-service-app.webp" alt="The app's Summer 2026 Client Directory screen, with Directory, Schedule, Outreach and Stats tabs and filters for priority, repeat clients and job status" width="900" height="839" loading="lazy" decoding="async">
+          </figure>
           <span class="when">Summer 2026</span>
           <h3>Field-Service Analytics App</h3>
           <p>I cleaned a season of my contracting business's job and client records and built an app around them: client directory, scheduling, job logging and reports by month, service line and client. A rules-based classifier sorts job descriptions into five service categories.</p>
