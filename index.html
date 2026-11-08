@@ -204,6 +204,8 @@
   .fact-card h3{font-size:1.15rem;margin-bottom:6px}
   .fact-card ul{list-style:none}
   .fact-card li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem;line-height:1.5;color:var(--ink-soft)}
+  .fact-card li.has-logo{display:flex;gap:14px;align-items:flex-start}
+  .fact-logo{flex:none;width:48px;height:48px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:8px;padding:3px;margin-top:2px}
   .fact-card li b{display:inline-block;color:var(--navy);font-weight:600;font-size:.85rem;margin-bottom:2px}
 
   /* Featured venture */
@@ -546,9 +548,9 @@
         <h3>Quick facts</h3>
         <ul>
           <li><b>Education</b><br>B.A. Business Analytics, minor in Entrepreneurship. University of San Diego, Knauss School of Business. May 2027.</li>
-          <li><b>Study abroad</b><br>University of New York in Prague, Fall 2025</li>
-          <li><b>Leadership</b><br>VP of Chapter Operations, Delta Sigma Pi (50+ members)</li>
-          <li><b>Also</b><br>USD Club Lacrosse since 2023</li>
+          <li class="has-logo"><img class="fact-logo" src="images/logo-unyp.webp" alt="University of New York in Prague logo" width="48" height="48" loading="lazy"><span><b>Study abroad</b><br>University of New York in Prague, Fall 2025</span></li>
+          <li class="has-logo"><img class="fact-logo" src="images/logo-dsp.webp" alt="Delta Sigma Pi crest" width="48" height="48" loading="lazy"><span><b>Leadership</b><br>VP of Chapter Operations, Delta Sigma Pi, Lambda Pi Chapter. A co-ed professional business fraternity (50+ members).</span></li>
+          <li class="has-logo"><img class="fact-logo" src="images/logo-usd.webp" alt="University of San Diego SD logo" width="48" height="48" loading="lazy"><span><b>Also</b><br>USD Club Lacrosse since 2023</span></li>
           <li><b>Based in</b><br>San Diego, CA and Portland, OR</li>
         </ul>
       </aside>
@@ -598,7 +600,7 @@
           <div class="project-text">
           <span class="when">Oct 2026 to present</span>
           <h3>EarnVouch</h3>
-          <p>A free iOS and Android app I'm building for students 14 to 24. They log gig work like babysitting, tutoring and lawn care, and each client confirms the job, so the student ends up with a record they can show colleges and employers. I planned the whole product myself, writing down more than 200 decisions about how it should work, and mapped out how to keep students' data safe. After a lawyer reviewed the rules for minors' data, I reworked the design to match. It passed Apple's App Store review on the first submission, about three weeks after design work started. In development, not launched.</p>
+          <p>A free iOS and Android app I'm building for students 14 to 24 to keep a client-confirmed record of their gig work, which they can share with colleges and employers. I wrote the product spec (more than 200 logged decisions), threat model and data model, then reworked the design after a lawyer reviewed the rules for minors' data. It passed Apple's App Store review on the first submission, about three weeks after the first design work. In development, not launched.</p>
           <div class="tags"><span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>Product spec</span></div>
           <a class="card-link" href="https://earnvouch.com" target="_blank" rel="noopener">earnvouch.com ↗</a>
           </div>
