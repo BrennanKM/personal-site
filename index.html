@@ -209,6 +209,20 @@
   .fact-card li b{display:inline-block;color:var(--navy);font-weight:600;font-size:.85rem;margin-bottom:2px}
 
   /* Featured venture */
+  .phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0 6px}
+  .phones img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,.14)}
+  .tech{display:grid;grid-template-columns:132px minmax(0,1fr);margin:0 0 30px;border-top:1px solid var(--line)}
+  .tech dt,.tech dd{padding:12px 0;border-bottom:1px solid var(--line)}
+  .tech dt{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding-top:15px}
+  .tech dd{font-size:.95rem;line-height:1.5;color:var(--ink-soft)}
+  .venture-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px}
+  .venture-ctas .card-link{margin-top:0}
+  @media(max-width:640px){
+    .phones{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .tech{grid-template-columns:1fr}
+    .tech dt{border-bottom:none;padding:14px 0 2px}
+    .tech dd{padding-top:0}
+  }
   .venture{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:0 0 10px 10px;padding:40px 40px 36px;margin-bottom:56px}
   .venture-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 32px;align-items:start}
   .venture .kicker{color:var(--gold-ink);font-size:.92rem;font-weight:600;margin-bottom:8px}
@@ -566,6 +580,36 @@
     </div>
     <div>
       <div class="venture">
+        <span class="kicker">Founder · Oct 2026 to present · Live on the App Store</span>
+        <h3>EarnVouch</h3>
+        <p>A free iPhone app for students 14 to 24 to keep a client-confirmed record of their gig work, which they can share with colleges and employers. A month before launch it was an empty folder. I took it to the App Store with a production app, API, website and moderation tool, built for minors' privacy and safety from day one.</p>
+        <div class="phones">
+          <img src="images/ev-1-jobs.webp" alt="App Store screenshot: Earn your vouch. The Jobs tab, with every job labeled Client-confirmed or Self-reported" width="600" height="1304" loading="lazy" decoding="async">
+          <img src="images/ev-2-job.webp" alt="App Store screenshot: Your client confirmed it. A babysitting job with the client's five-star review" width="600" height="1304" loading="lazy" decoding="async">
+          <img src="images/ev-4-preview.webp" alt="App Store screenshot: See what they'll see. The record page a college or employer opens" width="600" height="1304" loading="lazy" decoding="async">
+          <img src="images/ev-5-earnings.webp" alt="App Store screenshot: Your earnings, just for you. Earnings by year and month" width="600" height="1304" loading="lazy" decoding="async">
+        </div>
+        <div class="venture-points">
+          <div><b>Empty folder to App Store in a month</b>Passed Apple's review on the first submission, then launched in November 2026</div>
+          <div><b>227 documented decisions</b>A full product spec, 24 architecture decision records, and end-to-end tests on the app and website</div>
+          <div><b>Built for minors' data</b>Verifiable parental consent, a 39-point threat model, 5 security reviews and 4 rounds of legal review</div>
+        </div>
+        <dl class="tech">
+          <dt>Stack</dt><dd>TypeScript monorepo · Expo / React Native · Fastify · Postgres + Drizzle</dd>
+          <dt>Auth</dt><dd>Passkeys (WebAuthn) · Apple App Attest · signed App Store JWS</dd>
+          <dt>Encryption</dt><dd>AES-256-GCM fields · HMAC-SHA256 hashes · restore-proof deletion journal</dd>
+          <dt>Minors</dt><dd>Verifiable parental consent (Stripe Identity) · Declared Age Range API · COPPA retention</dd>
+          <dt>Safety</dt><dd>Azure AI Content Safety, then a human on every report</dd>
+          <dt>Rigor</dt><dd>39-point threat model · 5 security reviews · 4 legal rounds</dd>
+          <dt>Process</dt><dd>227 documented decisions · 24 ADRs · Playwright + Maestro end-to-end tests</dd>
+        </dl>
+        <div class="venture-ctas">
+          <a class="btn" href="https://apps.apple.com/app/id6827317192" target="_blank" rel="noopener">Get it on the App Store ↗</a>
+          <a class="card-link" href="https://earnvouch.com" target="_blank" rel="noopener">earnvouch.com ↗</a>
+        </div>
+      </div>
+
+      <div class="venture">
         <span class="kicker">Co-Founder · Winter 2023 to present</span>
         <h3>JuniorJobHunt</h3>
         <p>JuniorJobHunt connects local high school and college students with neighbors who need small everyday tasks done. It won $16,000 in grants through pitch competitions and is pre-launch while I build the full app.</p>
@@ -582,18 +626,6 @@
       </div>
 
       <div class="projects">
-        <article class="project has-media">
-          <figure class="media media-natural">
-            <img src="images/earnvouch.webp" alt="The EarnVouch homepage: Earn your vouch, a Get EarnVouch on the App Store banner, and example job cards marked Client-confirmed and Self-reported" width="1400" height="586" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-text">
-          <span class="when">Founder · Oct 2026 to present</span>
-          <h3>EarnVouch</h3>
-          <p>A free iPhone app, live on the App Store, for students 14 to 24 to keep a client-confirmed record of their gig work, which they can share with colleges and employers. I wrote the product spec (more than 200 logged decisions), threat model and data model, then reworked the design after a lawyer reviewed the rules for minors' data. It passed Apple's review on the first submission and launched on the App Store in November 2026, about four weeks after the first design work. Android is coming later.</p>
-          <div class="tags"><span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>Product spec</span></div>
-          <div style="display:flex;flex-wrap:wrap;gap:0 24px"><a class="card-link" href="https://apps.apple.com/app/id6827317192" target="_blank" rel="noopener">Get it on the App Store ↗</a><a class="card-link" href="https://earnvouch.com" target="_blank" rel="noopener">earnvouch.com ↗</a></div>
-          </div>
-        </article>
         <article class="project has-media">
           <figure class="media media-natural">
             <img src="images/field-service-app.webp" alt="The app's Summer 2026 Client Directory screen, with Directory, Schedule, Outreach and Stats tabs and filters for priority, repeat clients and job status" width="900" height="839" loading="lazy" decoding="async">
